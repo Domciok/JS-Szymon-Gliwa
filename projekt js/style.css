@@ -1,0 +1,43 @@
+html{
+    font-size: 10px;
+    background: url(https://www.videvo.net/wp-content/uploads/2018/05/Muisc-and-SFX-Feature.jpg)bottom center;
+    background-size: cover;
+}
+body,html {
+    margin: 0;
+    padding: 0;
+    font-family: Lucida;
+}
+.keys {
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.key {
+    border: 10px inset silver;
+    border-radius: 7px;
+    margin: 15px;
+    font-size: 20px;
+    padding: 10px;
+    transition: all .07s ease;
+    text-align: center;
+    background:cyan;
+    color:black;
+}
+kbd{
+    display: block;
+    font-family:Lucida Grande;
+    font-size: 3rem;
+}
+#rec{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+    display: flex;
+}
+#play{
+    justify-content: center;
+    display: flex;
+}
