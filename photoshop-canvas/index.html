@@ -9,10 +9,12 @@
     <script src="canvas-paint.js" type="text/javascript"></script>
 </head>
 <body>
-    <button id="darken">Ściemnianie</button>
-    <button id="ligten">Rozjaśnienie</button>
-    <button id="blur">Rozymycie</button>
+    <div id="controls">
+    <a class="ds2"><button id="darken"><img src="dark.png" alt="" srcset=""><span>Ściemnianie</span></button></a>
+    <a class="ds2"><button id="ligten"><img src="light.png"><span>Rozjaśnienie</span></button></a>
+    <a class="ds2"><button id="invert"><img src="invert.png"><span>Nagatyw</span></button></a>
+    <a class="ds2"><button id="greyscale"><img src="greyscale.png"><span>Skala Szarości</span></button></a>
+    </div>
     <canvas id="canvas" width="800" height="600"></canvas>
-
 </body>
 </html>
