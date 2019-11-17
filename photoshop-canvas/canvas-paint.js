@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', appStart)
 let canvas
 let ctx
 var md= false
+var tryb = "kwadrat"
 
 function appStart() {
    canvas= document.querySelector('#canvas')
@@ -20,7 +21,16 @@ function appStart() {
         .addEventListener('click', () => GreyScale())
     document
         .querySelector('#square')
-        .addEventListener('click', () => painting())
+        .addEventListener('click', () =>{ 
+            painting()
+            paintingSquare()
+        })
+    document
+        .querySelector('#circle')
+        .addEventListener('click', () =>{
+            paintingCircle()
+            painting()
+        } )
   ctx =canvas.getContext('2d')
     drawImage()
 }
@@ -77,9 +87,10 @@ function painting(){
         var mosuePos = getMousePos(canvas, evt)
         var posx =mosuePos.x
         var posy =mosuePos.y
-        draw(canvas, posx, posy)
+        var tryb = "circle"
+        draw(canvas, posx, posy, tryb)
     })
-    
+   
     function down(){
         md = true
     }
@@ -96,7 +107,21 @@ function painting(){
     function draw(canvas, posx, posy){
         var context = canvas.getContext('2d')
         if(md){
-            context.fillRect(posx, posy, 10, 10)
+            if (tryb == "square"){
+                context.fillRect(posx, posy, 10, 10)
+            }
+            else if (tryb == "circle"){
+            context.beginPath()
+            context.arc(posx, posy, 10, 0, 2 * Math.PI)
+            context.fill()}
         }
     }
+}
+function paintingCircle()
+{
+tryb = "circle"
+}
+function paintingSquare()
+{
+tryb = "square"
 }
