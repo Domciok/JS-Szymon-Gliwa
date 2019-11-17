@@ -38,3 +38,10 @@ a.ds2 span {
     background-color: white;
     position: relative;
 }
+#colors{
+    float: right;
+    margin-right: 50px;
+    padding: 5px;
+    border: white;
+    border-style: groove;
+}

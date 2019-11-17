@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', appStart)
 
 let canvas
 let ctx
+var md= false
 
 function appStart() {
    canvas= document.querySelector('#canvas')
@@ -17,12 +18,10 @@ function appStart() {
     document
         .querySelector('#greyscale')
         .addEventListener('click', () => GreyScale())
+    document
+        .querySelector('#square')
+        .addEventListener('click', () => painting())
   ctx =canvas.getContext('2d')
-    /*ctx.rect(50,50,300,200)
-    ctx.fill()
-    ctx.arc(500,500,50,0,2*Math.PI)
-    ctx.stroke()
-    //ctx.stroke() obrys*/
     drawImage()
 }
 function drawImage(){
@@ -69,4 +68,35 @@ function GreyScale(){
         canvasData.data[i + 2] = avg
     }
     ctx.putImageData(canvasData, 0, 0)
+}
+function painting(){
+    canvas.addEventListener('mousedown', down)
+    canvas.addEventListener('mouseup', toggledraw)
+    canvas.addEventListener('mousemove',
+    function(evt){
+        var mosuePos = getMousePos(canvas, evt)
+        var posx =mosuePos.x
+        var posy =mosuePos.y
+        draw(canvas, posx, posy)
+    })
+    
+    function down(){
+        md = true
+    }
+    function toggledraw(){
+        md = false
+    }
+    function getMousePos(canvas, evt){
+        var rect = canvas.getBoundingClientRect()
+        return{
+            x:evt.clientX - rect.left,
+            y:evt.clientY - rect.top
+        }
+    }
+    function draw(canvas, posx, posy){
+        var context = canvas.getContext('2d')
+        if(md){
+            context.fillRect(posx, posy, 10, 10)
+        }
+    }
 }
