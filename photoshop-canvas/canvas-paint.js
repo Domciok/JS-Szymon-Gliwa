@@ -4,6 +4,7 @@ let canvas
 let ctx
 var md= false
 var tryb = "kwadrat"
+const color = drawcolor
 
 function appStart() {
    canvas= document.querySelector('#canvas')
@@ -31,6 +32,26 @@ function appStart() {
             paintingCircle()
             painting()
         } )
+    document
+        .querySelector('#green')
+        .addEventListener('click', () =>{
+            green()
+        })
+    document
+        .querySelector('#black')
+        .addEventListener('click', () =>{
+            black()
+        })
+        document
+        .querySelector('#red')
+        .addEventListener('click', () =>{
+            red()
+        })
+        document
+        .querySelector('#yellow')
+        .addEventListener('click', () =>{
+            yellow()
+        })
   ctx =canvas.getContext('2d')
     drawImage()
 }
@@ -106,14 +127,18 @@ function painting(){
     }
     function draw(canvas, posx, posy){
         var context = canvas.getContext('2d')
+        
         if(md){
             if (tryb == "square"){
                 context.fillRect(posx, posy, 10, 10)
+                context.fillStyle = drawcolor
             }
             else if (tryb == "circle"){
             context.beginPath()
             context.arc(posx, posy, 10, 0, 2 * Math.PI)
-            context.fill()}
+            context.fill()
+            context.fillStyle = drawcolor
+        }
         }
     }
 }
@@ -124,4 +149,16 @@ tryb = "circle"
 function paintingSquare()
 {
 tryb = "square"
+}
+function green(){
+    drawcolor = 'green'
+}
+function black(){
+    drawcolor = 'black'
+}
+function red(){
+    drawcolor = 'red'
+}
+function yellow(){
+    drawcolor = 'yellow'
 }
