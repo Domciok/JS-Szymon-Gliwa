@@ -24,5 +24,10 @@ const TilesProperties = {
     type: 'stone',
     spriteXPos: 0,
     spriteYPos: 224
+    },
+    miner: {
+        type: 'miner',
+        spriteXPos: 0,
+        spriteYPos: 0
     }
 }
