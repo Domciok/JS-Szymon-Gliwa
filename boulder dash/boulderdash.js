@@ -11,6 +11,13 @@ class Boulderdash{
         this.generateLevel()
         this.renderLevel()
     }
+    loadSprite(){
+        this.tilesSprite = new Image()
+        this.tilesSprite.scr = './sprites.png'
+        this.tilesSprite.onload = () =>{
+            this.renderLevel()
+        }
+    }
     intializeCanvas(canvasId){
         if(!canvasId){
             throw new Error ('You have to provide Canvas ID')
@@ -33,6 +40,8 @@ class Boulderdash{
             this.tileSize,
             xPos,
             yPos,
+            this.tileSize,
+            this.tileSize,
             )
             }
         }

@@ -2,23 +2,23 @@ const TilesProperties = {
     empty: {
     type: "empty",
     spriteXPos: 0,
-    spriteYPos: 0
+    spriteYPos: 192
     },
 
     sand: {
     type: 'sand',
-    spriteXPos: 50,
-    spriteYPos: 120
+    spriteXPos: 32,
+    spriteYPos: 224
     },
     diamond: {
     type: 'diamond',
-    spriteXPos: 30,
-    spriteYPos: 160
+    spriteXPos: 0,
+    spriteYPos: 320
     },
     wall: {
     type: 'wall',
-    spriteXPos: 150,
-    spriteYPos: 100
+    spriteXPos: 96,
+    spriteYPos: 192
     },
     stone: {
     type: 'stone',
