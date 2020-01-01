@@ -1,15 +1,21 @@
-let notesArr = []
-
-class Note{
-    constructor(title = '', description = ''){
+class Note
+{
+    constructor(title, description, color)
+    {
         this.title = title
         this.description = description
-        this.color = 'orange'
-        this.created = Date().toDataString()
-        this.pinned = false
+        this.color = color;
+        this.date = new Date().toDateString();
+        this.pinned = false;
     }
+addToLS(note)
+        {
+    localStorage.setItem("notes", JSON.stringify(note));
+        }
+printNote()
+        {
+        let notesArr = [];
+        notesArr = JSON.parse(localStorage.getItem("notes"));
+        return notesArr;
+        }
 }
-
-localStorage.setItem('notes', JSON.stringify(notesArr))
-
-notesArr = JSON.parse(loc)
