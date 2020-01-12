@@ -11,7 +11,7 @@ body,html {
 .keys {
     display: flex;
     flex: 1;
-    min-height: 100vh;
+    min-height: 80vh;
     align-items: center;
     justify-content: center;
 }
@@ -31,13 +31,11 @@ kbd{
     font-family:Lucida Grande;
     font-size: 3rem;
 }
-#rec{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    justify-content: center;
-    display: flex;
+.buttons{
+ margin-left: 15px;
 }
-#play{
-    justify-content: center;
-    display: flex;
+button{
+    padding: 5px;
+    float: left;
+    margin-right: 5px;
 }
