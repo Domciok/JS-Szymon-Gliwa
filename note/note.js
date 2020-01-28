@@ -1,21 +1,19 @@
 class Note
 {
-    constructor(title, description, color)
+    constructor(title, description, color, pinned)
     {
         this.title = title
         this.description = description
-        this.color = color;
-        this.date = new Date().toDateString();
-        this.pinned = false;
+        this.color = color
+        this.pinned = pinned
+        let data = new Date()
+        let date =  data.toLocaleDateString()
+        let time = data.toLocaleTimeString()
+        this.currentdate = date +' '+ time
     }
-addToLS(note)
+        addToLS(note)
         {
-    localStorage.setItem("notes", JSON.stringify(note));
+    localStorage.setItem(localStorage, JSON.stringify(note));
         }
-printNote()
-        {
-        let notesArr = [];
-        notesArr = JSON.parse(localStorage.getItem("notes"));
-        return notesArr;
-        }
+
 }

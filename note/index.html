@@ -2,19 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="note.js"></script>
-    <script src="scrip.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="content">
-        <h2>Title:</h2>
-        <p>Note text:</p>
-        <p>Create date:</p>
-    </div>
-    <p>New note Title:</p> <input type="text" id="title">
-    <p>Description:</p> <input type="text" id="description">
-    <p>Color</p><input type="color" id="colorset">
-    <button id="addNoteBTN">Add note</button>
+    <div id="creating"><textarea id="title" placeholder="Wpisz tytuł..."></textarea>
+        <textarea id="description" placeholder="Wpisz zawartość..."></textarea></br>
+        <input type="color" value="#f6b73c" id="color">
+        <p><input type="checkbox" id="pinnedBT">Przypnij notatkę</p>
+        <button id="addNoteBTN">Add note</button>
+        </div>
+        <div id="notes"></div>
+    <script src="note.js"></script>
+    <script src="scrip.js"></script>
 </body>
 </html>

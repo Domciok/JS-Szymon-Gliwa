@@ -1,8 +1,45 @@
 body{
     background-color: #696969;
 }
-.content{
-    border-color: white;
-    border-style: double;
-   /* display: none;*/
+textarea{
+    min-height: 100px;
+    max-width: 100%;
+    background-color: slategrey;
+    border-style: hidden;
+    margin-bottom: 5px;
+}
+#creating{
+    width: 20%;
+    height: auto;
+    margin-right: 10vh;
+    margin-bottom: 10vh;
+    float: left;
+    color: #ffff;
+    font-family: sans-serif;
+}
+#notes{
+    height: 80vh;
+    float: left;
+    width: 75%;
+    display: flexbox;
+}
+.title{
+    padding: 5px;
+    font-size: 24px;
+    text-align: center;
+    font-family: Apple Chancery, cursive;
+    font-weight: bold;
+}
+.container{
+float: left;
+padding: 5px;
+text-align: center;
+width: 250px;
+word-wrap: break-word;
+font-family: Apple Chancery, cursive;
+margin-right: 10px;
+margin-bottom: 10px;
+}
+.time{
+    font-size: 12px;
 }
