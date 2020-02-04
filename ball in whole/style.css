@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+body{
+    background-color: grey;
+}
+.gamewindow
+#ball{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: darkblue;
+    top: 50;
+    left: 50;
+}
+#hole{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: darkred;
+    top:100px;
+    left: 200px;
+    position: absolute;
+    z-index: -1;
+=======
 body{
     background-color: grey;
 }
@@ -19,4 +43,5 @@ body{
     top:0px;
     left: 0px;
     position: absolute;
+>>>>>>> f74724be46d5160008e9a53e55e38463260c3845
 }
